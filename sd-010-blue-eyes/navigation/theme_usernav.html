@@ -1,0 +1,30 @@
+<div id="navbar">
+  <table cellspacing="2" cellpadding="2" id="menu1" class="NavMenu">
+          <tr>
+              <{if $xoops_isuser == 1}>
+                <td align="left">
+                  <a class="button" href="<{$xoops_url}>/user.php">user</a>
+                  <a class="button" href="<{$xoops_url}>/notifications.php">notificaions</a>
+          <a class="button" href="<{$xoops_url}>/user.php?op=logout">logout</a>
+                  <{if $xoops_isadmin}>
+               <a class="button" href="<{$xoops_url}>/admin.php">admin</a>
+          <{/if}>
+         </td>
+           <{else}>
+                 <!--<td id="date">
+                 <{php}>echo _MONTHSTRING;<{/php}>
+                 </td>  -->
+          <{/if}>
+          <td id="search">
+            <form style="margin: 0px;" action="<{$xoops_url}>/search.php" method="get">
+                  <input type="text" name="query" size="14" />
+                <input type="hidden" name="action" value="results" />
+                <input class="formButton" type="submit" value="<{$smarty.const._SEARCH}>" />
+                  <{if $smarty.const.modid > 1}>
+              <input type="hidden" name="mids[]" value="<{$smarty.const.modid}>" />
+                  <{/if}>
+                </form>
+          </td>
+    </tr>
+  </table>
+</div>

@@ -1,0 +1,11 @@
+/*
+   CSS for Simple-Xoops V 0.8
+        theme name:        sinnedesign-010-blue-eyes-xoops
+   Standart Admin Styles
+        Version 0.1
+*/
+
+@import url(core.css);
+@import url(column.css);
+@import url(menu.css);
+@import url(admin.css);
